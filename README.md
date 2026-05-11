@@ -4,6 +4,14 @@
 
 This project implements a novel colour-based steganography technique for hiding secret messages within digital images. The method uses a key color and tolerance to select specific pixels for embedding data, ensuring the hidden information is visually indistinguishable. Additionally, it employs Chi-Square analysis to detect the presence of steganographic content in images, providing a statistical measure of detectability.
 
+### Example: Embedding Historical Text
+
+One example demonstrates embedding a detailed biography of J. Robert Oppenheimer into an image using a key color of `(89, 89, 89)` and a tolerance of `1.7320508075688772`. The encoded image appears visually identical to the original, but contains the hidden message.
+
+| Original Image | Visualization of Embedded Data |
+|---------------|-------------------------------|
+| ![Original](Examples/oppenheimer%20copy.jpg) | ![Visualization](Examples/oppenheimer%20copy_visualization.png) |
+
 ## Features
 
 - **Secure Embedding**: Hide text messages in images using color-based pixel selection
@@ -64,14 +72,6 @@ The detection method analyzes the distribution of LSBs in selected pixels:
 - Lower Chi-Square statistics indicate higher detectability risk
 
 ## Examples
-
-### Example: Embedding Historical Text
-
-One example demonstrates embedding a detailed biography of J. Robert Oppenheimer into an image using a key color of `(89, 89, 89)` and a tolerance of `1.7320508075688772`. The encoded image appears visually identical to the original, but contains the hidden message.
-
-| Original Image | Visualization of Embedded Data |
-|---------------|-------------------------------|
-| ![Original](Examples/oppenheimer%20copy.jpg) | ![Visualization](Examples/oppenheimer%20copy_visualization.png) |
 
 For more examples, including additional encoded messages, LSB distribution analysis, and step-by-step details, see [examples.md](examples.md).
 
